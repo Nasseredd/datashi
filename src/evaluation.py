@@ -26,7 +26,7 @@ def evaluate_text(ground_truth: str, predicted_text: str):
     }
 
 df = pd.read_excel("data/dataset.xlsx")
-ground_truths = df["SHI-1"].tolist() 
+ground_truths = df["SHI-s"].tolist() 
 
 
 files = {
