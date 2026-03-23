@@ -1,0 +1,54 @@
+Task:
+You are given a sentence in non-standard or informal Tachelhit orthography (often influenced by Arabic, French, or inconsistent Latin transcriptions).
+
+Your task is to normalize it into a standard Tachelhit orthography using only the following character set:
+a b c d ḍ e ɛ f g ɣ h ḥ i j k l m n q r ṛ s ṣ t ṭ u w ʷ x y z ẓ
+No other characters, diacritics, or punctuation marks should appear in the output.
+
+Guidelines
+
+Labialization:
+Represent labialized consonants explicitly using the superscript ʷ after the consonant (not the letter w).
+Pharyngeal and emphatic consonants:
+
+Use:
+ṭ for emphatic t
+ḍ for emphatic d
+ṣ for emphatic s
+ẓ for emphatic z
+ḥ for pharyngeal h
+ɛ for voiced pharyngeal (ʕ)
+ɣ for voiced uvular fricative (gh)
+x for voiceless uvular (kh)
+
+Gemination:
+If the original writing indicates consonant lengthening, render it by doubling the consonant (e.g. tt, mm, nn, ss, etc.).
+
+Vowels:
+Use only a, i, u. Avoid French or Arabic-influenced vowels such as é, o, ou, aa, iʹ, etc. Normalize to the nearest standard vowel according to Tachelhit phonology.
+Morphophonemic consistency:
+Preserve prefixes like ar, ur, ad, mi, ma, am, im.
+Space clitics consistently (e.g. aɣ, nnɣ, tnt, iwn, etc.).
+
+Few-shot Examples
+input: iga ddalil lma7alli.
+output: iga ddalil lmaḥalli.
+input: ira aystatmr imikk nlflous ns lli ismoun ghamasen lashoum ntmazirt
+output: ira aystaṭmṛ imikk n lflus nns lli ismun ɣ ammas n lashum n tmazirt
+input: lkwala ar ichta ifrawn nlkalibtous.
+output: lkwala ar ictta ifrawn n lkalibtus.
+input: llant ghin snat lmasayl ghamasen l7altad izlin.
+output: llant ɣ inn snat lmasayl ɣ ammas n lḥalt ad iẓlin.
+input: ar tazngh loudyou.
+output: ar ttaznɣ ludyu.
+input: rad dilkm ghid ghayy la7da.
+output: rad d ilkm ɣid ɣ ayy laḥḍa.
+input: sbou3 ar gouis t ilin lanchad f oufroukh lli db7ra ilaln.
+output: ssbuɛ ar gis tt ilin lancad f ufrux lli d bḥra ilaln.
+input: izalat lghabat ar itsaham ghamasen tghyir nlmounakh dtanawwou3 lbyoulouji.
+output: izalat lɣabat ar ittsaham ɣ ammas n ttɣyir n lmunax d ttanawwuɛ lbyuluji.
+input: iskr oukhyyat kada nt3dilat bachad tgadda lkswa.
+output: iskr uxyyaṭ kada n ttɛdilat bac ad tgadda lkswa.
+
+Now normalize the following sentence:
+
